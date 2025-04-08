@@ -201,43 +201,57 @@
 
    /* animate elements if in viewport
     * ------------------------------------------------------ */
-    const ssAnimateOnScroll = function() {
+   /* animate elements if in viewport
+* ------------------------------------------------------ */
+const ssAnimateOnScroll = function() {
 
-        const blocks = document.querySelectorAll('[data-animate-block]');
+    const blocks = document.querySelectorAll('[data-animate-block]');
+    const skillBars = document.querySelectorAll('.skill-bars li .progress');
 
-        window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('scroll', animateOnScroll);
 
-        function animateOnScroll() {
+    function animateOnScroll() {
+        let scrollY = window.pageYOffset;
 
-            let scrollY = window.pageYOffset;
+        // Animate regular blocks
+        blocks.forEach(function(current) {
+            const viewportHeight = window.innerHeight;
+            const triggerTop = (current.offsetTop + (viewportHeight * .1)) - viewportHeight;
+            const blockHeight = current.offsetHeight;
+            const blockSpace = triggerTop + blockHeight;
+            const inView = scrollY > triggerTop && scrollY <= blockSpace;
+            const isAnimated = current.classList.contains('ss-animated');
 
-            blocks.forEach(function(current) {
+            if (inView && (!isAnimated)) {
+                anime({
+                    targets: current.querySelectorAll('[data-animate-el]'),
+                    opacity: [0, 1],
+                    translateY: [100, 0],
+                    delay: anime.stagger(200, {start: 200}),
+                    duration: 600,
+                    easing: 'easeInOutCubic',
+                    begin: function(anim) {
+                        current.classList.add('ss-animated');
+                    }
+                });
+            }
+        });
 
-                const viewportHeight = window.innerHeight;
-                const triggerTop = (current.offsetTop + (viewportHeight * .1)) - viewportHeight;
-                const blockHeight = current.offsetHeight;
-                const blockSpace = triggerTop + blockHeight;
-                const inView = scrollY > triggerTop && scrollY <= blockSpace;
-                const isAnimated = current.classList.contains('ss-animated');
+        // Animate skill bars when they come into view
+        skillBars.forEach(function(bar) {
+            const barPosition = bar.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
 
-                if (inView && (!isAnimated)) {
+            if (barPosition < screenPosition) {
+                bar.style.width = bar.getAttribute('data-percent');
+            }
+        });
+    }
 
-                    anime({
-                        targets: current.querySelectorAll('[data-animate-el]'),
-                        opacity: [0, 1],
-                        translateY: [100, 0],
-                        delay: anime.stagger(200, {start: 200}),
-                        duration: 600,
-                        easing: 'easeInOutCubic',
-                        begin: function(anim) {
-                            current.classList.add('ss-animated');
-                        }
-                    });
-                }
-            });
-        }
+    // Trigger once on load in case elements are already in view
+    animateOnScroll();
 
-    }; // end ssAnimateOnScroll
+}; // end ssAnimateOnScroll
 
 
 
@@ -357,6 +371,38 @@
 
     }; // end ssMoveTo
 
+    /* skill bars animation
+* ------------------------------------------------------ */
+const ssSkillBars = function() {
+    const skillBars = document.querySelectorAll('.skill-bars li .progress');
+    
+    // Add loaded class to body when page is fully loaded
+    window.addEventListener('load', function() {
+        document.documentElement.classList.add('loaded');
+        
+        // Animate skill bars
+        skillBars.forEach(function(bar) {
+            const percent = bar.classList[1].replace('percent', '');
+            bar.style.setProperty('--final-width', percent + '%');
+        });
+    });
+
+    // Also animate when scrolled into view
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                const bar = entry.target;
+                const percent = bar.classList[1].replace('percent', '');
+                bar.style.setProperty('--final-width', percent + '%');
+                observer.unobserve(bar);
+            }
+        });
+    }, {threshold: 0.5});
+
+    skillBars.forEach(function(bar) {
+        observer.observe(bar);
+    });
+}; // end ssSkillBars
 
 
    /* initialize
@@ -372,6 +418,7 @@
         ssAlertBoxes();
         ssBackToTop();
         ssMoveTo();
+        ssSkillBars();
 
     })();
 
