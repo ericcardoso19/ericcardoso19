@@ -415,5 +415,31 @@
   </div>
 </div>
 
+
+<script>
+    // Abrir modal
+    document.querySelectorAll('.see-more-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const modalId = button.getAttribute('data-modal-target');
+            document.querySelector(modalId).style.display = 'block';
+        });
+    });
+
+    // Fechar modal
+    document.querySelectorAll('.close-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            btn.closest('.modal').style.display = 'none';
+        });
+    });
+
+    // Fechar ao clicar fora do conteúdo
+    window.addEventListener('click', (e) => {
+        if (e.target.classList.contains('modal')) {
+            e.target.style.display = 'none';
+        }
+    });
+</script>
+
+    
 </body>
 </html>
