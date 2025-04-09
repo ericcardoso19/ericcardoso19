@@ -2436,65 +2436,6 @@ td:last-child {
 .pgn__next.inactive:hover {
     background-color : transparent;
 }
-
-/* ================================
- * Seção de Projetos Acadêmicos
- * ================================ */
-.s-works {
-    background-color: var(--color-body);
-    padding: var(--vspace-4) 0;
-}
-
-.s-works__header {
-    text-align: center;
-    margin-bottom: var(--vspace-2_5);
-}
-
-.folio-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--vspace-1_5);
-}
-
-.folio-item {
-    background-color: var(--color-white);
-    border-radius: var(--border-radius);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.folio-item:hover {
-    transform: translateY(-5px);
-}
-
-.folio-item__thumb img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.folio-item__info {
-    padding: var(--vspace-1);
-}
-
-.folio-item__title {
-    font-size: var(--text-lg);
-    margin-bottom: var(--vspace-0_5);
-}
-
-.folio-item__meta {
-    font-size: var(--text-sm);
-    color: var(--color-text-light);
-    margin-bottom: var(--vspace-0_5);
-}
-
-.folio-item__desc p {
-    font-size: var(--text-sm);
-    color: var(--color-text);
-    line-height: 1.5;
-}
-
   
 /* ------------------------------------------------------------------- 
  * ## alert box 
