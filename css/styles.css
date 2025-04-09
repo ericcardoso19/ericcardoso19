@@ -2437,6 +2437,20 @@ td:last-child {
     background-color : transparent;
 }
 
+    /* ------------------------------------------------------------------- 
+ * ## AJUSTE DE ESPAÇAMENTO ENTRE SEÇÕES
+ * ------------------------------------------------------------------- */
+ 
+/* Reduz o espaçamento inferior das seções */
+.s-about__skills {
+    margin-bottom: var(--vspace-0_75) !important; /* Reduzindo de vspace-1 para vspace-0_75 */
+}
+
+/* Se precisar de ajuste extra entre itens individuais */
+.skill-bars li {
+    margin-bottom: var(--vspace-0_5); /* Ajuste opcional para itens dentro das barras */
+}
+
 /* ------------------------------------------------------------------- 
  * responsive:
  * pagination
