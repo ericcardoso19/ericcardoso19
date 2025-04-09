@@ -2441,7 +2441,7 @@ td:last-child {
  * # WORKS
  * ------------------------------------------------------------------- */
 .s-works {
-    padding: var(--vspace-5) 0;
+   
     background-color: var(--color-body);
 }
 
