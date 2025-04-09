@@ -238,7 +238,8 @@
 
 
       <!-- projetos -->
-<section id="works" class="s-more">
+<!-- projetos -->
+<section id="works" class="s-about">
     <div class="row">
         <div class="column lg-12">
             <h2 class="text-pretitle">Projetos</h2>
@@ -250,31 +251,43 @@
 
     <div class="row block-lg-whole s-works__projects">
 
+        <!-- Projeto 1 -->
         <div class="column lg-6">
             <div class="project-card">
+                <img src="images/projects/4-em-linha.png" alt="Jogo 4 em Linha">
                 <h3 class="text-title">Jogo 4 em Linha (Kotlin)</h3>
-                <p>Desenvolvimento de um jogo interativo em Kotlin, com lógica de jogo e interface gráfica, proporcionando uma experiência divertida e desafiadora.</p>
+                <p>Desenvolvimento de um jogo interativo com lógica de vitória, empate e interface gráfica em Kotlin.</p>
+                <button class="btn btn--stroke see-more-btn" data-modal-target="#modal-jogo4">Ver Mais</button>
             </div>
         </div>
 
+        <!-- Projeto 2 -->
         <div class="column lg-6">
             <div class="project-card">
+                <img src="images/projects/gestao-condominios.png" alt="Sistema de Gestão de Condomínios">
                 <h3 class="text-title">Sistema de Gestão de Condomínios (Java)</h3>
-                <p>Aplicação Java para gerir dados de condomínios, moradores, pagamentos e manutenção, com funcionalidades organizadas e intuitivas.</p>
+                <p>Aplicação em Java para gerir moradores, pagamentos e manutenção de edifícios residenciais.</p>
+                <button class="btn btn--stroke see-more-btn" data-modal-target="#modal-condominios">Ver Mais</button>
             </div>
         </div>
 
+        <!-- Projeto 3 -->
         <div class="column lg-6">
             <div class="project-card">
-                <h3 class="text-title">Projeto de Arquitetura de Redes (Cisco Packet Tracer)</h3>
-                <p>Configuração de uma rede com duas VLANs e dois servidores dedicados, promovendo segmentação e segurança de rede num ambiente simulado.</p>
+                <img src="images/arquitetura-redes.png" alt="Projeto de Redes com VLANs">
+                <h3 class="text-title">Projeto de Redes com VLANs (Packet Tracer)</h3>
+                <p>Configuração de duas VLANs com dois servidores dedicados usando Cisco Packet Tracer.</p>
+                <button class="btn btn--stroke see-more-btn" data-modal-target="#modal-vlans">Ver Mais</button>
             </div>
         </div>
 
+        <!-- Projeto 4 -->
         <div class="column lg-6">
             <div class="project-card">
-                <h3 class="text-title">Base de Dados para Clínica Veterinária</h3>
-                <p>Projeto de modelação e criação de uma base de dados para gestão de uma clínica veterinária, incluindo registo de clientes, animais, consultas e tratamentos.</p>
+                <img src="images/clinica-veterinaria.png" alt="Base de Dados Clínica Veterinária">
+                <h3 class="text-title">Base de Dados Clínica Veterinária</h3>
+                <p>Criação de um sistema de base de dados para gestão de consultas, animais e clientes.</p>
+                <button class="btn btn--stroke see-more-btn" data-modal-target="#modal-clinica">Ver Mais</button>
             </div>
         </div>
 
@@ -365,5 +378,42 @@
     <!-- Java Script -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- Modal Projeto 1 -->
+<div id="modal-jogo4" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Jogo 4 em Linha (Kotlin)</h2>
+    <p>Criação de um jogo completo com suporte a dois jogadores, verificação de vitórias em linha, interface em Swing e animações básicas. Utilizei estruturas de dados para controlar o estado do jogo.</p>
+  </div>
+</div>
+
+<!-- Modal Projeto 2 -->
+<div id="modal-condominios" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Sistema de Gestão de Condomínios</h2>
+    <p>Aplicação desenvolvida em Java que permite gerir os dados dos moradores, controlar mensalidades, agendar manutenções e gerar relatórios. Utiliza conceitos de POO e manipulação de ficheiros.</p>
+  </div>
+</div>
+
+<!-- Modal Projeto 3 -->
+<div id="modal-vlans" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Projeto de Redes com VLANs</h2>
+    <p>Simulação de uma rede segmentada com duas VLANs e dois servidores distintos para garantir segurança e organização da rede. Projeto feito com Cisco Packet Tracer com routing inter-VLAN e testes de conectividade.</p>
+  </div>
+</div>
+
+<!-- Modal Projeto 4 -->
+<div id="modal-clinica" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Base de Dados Clínica Veterinária</h2>
+    <p>Modelação e implementação de base de dados relacional para gerir consultas, clientes, animais e tratamentos. Inclui normalização de dados e queries SQL para relatórios administrativos.</p>
+  </div>
+</div>
+
 </body>
 </html>
