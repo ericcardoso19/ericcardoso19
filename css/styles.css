@@ -2437,45 +2437,7 @@ td:last-child {
     background-color : transparent;
 }
 
-   /* ------------------------------------------------------------------- 
- * ## ESTILOS COMPACTOS PARA SEÇÕES DE SKILLS
- * ------------------------------------------------------------------- */
- 
-/* Reduz espaçamento entre seções (Soft/Hard Skills e Idiomas) */
-.compact-section {
-    margin-bottom: var(--vspace-0_5) !important; /* Reduzido de vspace-1 para vspace-0_5 */
-}
-
-/* Reduz espaçamento entre itens individuais */
-.compact-list .compact-item {
-    margin-bottom: var(--vspace-0_375); /* Reduzido de vspace-0_5 para vspace-0_375 */
-}
-
-/* Ajuste fino para títulos */
-.compact-section .section-title-wrapper {
-    margin-bottom: var(--vspace-0_75); /* Reduz espaçamento abaixo do título */
-}
-
-/* Mantém o traço decorativo alinhado */
-.compact-section .with-line::before {
-    top: 55%; /* Ajuste sutil de posicionamento */
-}
-
-/* Versão mobile - espaçamento ainda mais compacto */
-@media screen and (max-width: 600px) {
-    .compact-section {
-        margin-bottom: var(--vspace-0_375) !important;
-    }
-    
-    .compact-list .compact-item {
-        margin-bottom: var(--vspace-0_25);
-    }
-    
-    .compact-section .section-title-wrapper {
-        margin-bottom: var(--vspace-0_5);
-    }
-}
-    
+  
 /* ------------------------------------------------------------------- 
  * ## alert box 
  * ------------------------------------------------------------------- */
