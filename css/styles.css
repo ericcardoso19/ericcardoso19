@@ -2437,28 +2437,82 @@ td:last-child {
     background-color : transparent;
 }
 
-    /* Adicione ao seu styles.css */
-.folio-item {
+ /* ===================================================================
+ * # WORKS
+ * ------------------------------------------------------------------- */
+.s-works {
+    padding: var(--vspace-5) 0;
+    background-color: white;
+}
+
+.folio-list {
+    margin-top: var(--vspace-2_5);
     margin-bottom: var(--vspace-2);
 }
 
-.folio-item__desc {
-    margin-top: var(--vspace-0_5);
-    font-size: var(--text-sm);
-    line-height: 1.6;
-    color: var(--color-text-light);
+.folio-item {
+    margin-bottom: var(--vspace-1_5);
 }
 
 .folio-item__thumb {
-    border-radius: var(--border-radius);
+    position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: var(--border-radius);
 }
 
-.folio-item__thumb:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+.folio-item__thumb a {
+    display: block;
+    position: relative;
+}
+
+.folio-item__thumb img {
+    vertical-align: bottom;
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.folio-item__thumb:hover img {
+    transform: scale(1.05);
+}
+
+.folio-item__text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--vspace-1);
+    background: rgba(0,0,0,0.7);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.folio-item__thumb:hover .folio-item__text {
+    opacity: 1;
+}
+
+.folio-item__info {
+    padding: var(--vspace-0_75) 0;
+}
+
+.folio-item__title {
+    font-size: var(--text-md);
+    margin: 0 0 var(--vspace-0_25);
+    color: var(--color-text-dark);
+}
+
+.folio-item__meta {
+    font-family: var(--font-1);
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+    margin-bottom: var(--vspace-0_25);
+}
+
+.folio-item__desc {
+    font-size: var(--text-sm);
+    line-height: 1.6;
+    color: var(--color-text-light);
 }
   
 /* ------------------------------------------------------------------- 
