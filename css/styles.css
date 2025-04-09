@@ -4237,7 +4237,7 @@ img.u-pull-left {
 }
 
     .project-card img {
-    width: 50%;
+    width: auto;
     height: auto;
     display: block;
     border-radius: 8px; /* Se quiser bordas arredondadas */
