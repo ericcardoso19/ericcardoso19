@@ -2437,6 +2437,29 @@ td:last-child {
     background-color : transparent;
 }
 
+    /* Adicione ao seu styles.css */
+.folio-item {
+    margin-bottom: var(--vspace-2);
+}
+
+.folio-item__desc {
+    margin-top: var(--vspace-0_5);
+    font-size: var(--text-sm);
+    line-height: 1.6;
+    color: var(--color-text-light);
+}
+
+.folio-item__thumb {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.folio-item__thumb:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
   
 /* ------------------------------------------------------------------- 
  * ## alert box 
