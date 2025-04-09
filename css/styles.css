@@ -4298,3 +4298,13 @@ img.u-pull-left {
     color: var(--color-text-dark);
 }
 
+/* Estilos para a imagem no modal */
+.modal-image {
+    width: 100%;
+    max-width: 400px; /* Limite o tamanho da imagem */
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Centraliza a imagem */
+    border-radius: 8px; /* Bordas arredondadas, se desejar */
+}
+
