@@ -2266,6 +2266,65 @@ td:last-child {
 /* -------------------------------------------------------------------
  * ## pagination
  * ------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------- 
+ * ## TÍTULOS COM TRAÇO DECORATIVO 
+ * ------------------------------------------------------------------- */
+
+/* Estilo base para todos os títulos com traço */
+.skills-section-title,
+.languages-section-title {
+    position: relative;
+    padding-left: var(--timeline-left-padding);
+    margin-bottom: var(--vspace-1);
+}
+
+/* Traço decorativo - versão para skills */
+.skills-section-title::before,
+.languages-section-title::before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 30px;
+    background: var(--color-1);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Texto do título */
+.skills-section-title h3,
+.languages-section-title h3 {
+    font-family: var(--font-2);
+    font-weight: 400;
+    font-size: var(--text-xl);
+    color: var(--color-text-dark);
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Efeito hover */
+.skills-section-title:hover::before,
+.languages-section-title:hover::before {
+    width: 40px;
+    background: var(--color-1-dark);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Versão para mobile */
+@media screen and (max-width: 600px) {
+    .skills-section-title,
+    .language-section-title {
+        padding-left: var(--vspace-1);
+    }
+    
+    .skills-section-title::before,
+    .languages-section-title::before {
+        width: 20px;
+    }
+}
+
 .pgn {
     --pgn-num-height : calc(var(--vspace-1) + .4rem);
     margin           : 0 auto var(--vspace-1);
