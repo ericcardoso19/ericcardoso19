@@ -2589,6 +2589,67 @@ td:last-child {
 .skill-bars li .percent10::before { --final-width: 10%; }
 /* ... continue com todas as classes de percentual ... */
 .skill-bars li .percent100::before { --final-width: 100%; }
+
+
+
+    /* ------------------------------------------------------------------- 
+ * ## skillbars - TÍTULOS ESTILIZADOS
+ * ------------------------------------------------------------------- */
+.skill-bars li strong {
+    display: inline-block;
+    font-family: var(--font-2); /* Usando a fonte serif para mais elegância */
+    font-weight: 400;
+    font-size: calc(var(--text-size) * 0.9);
+    line-height: 1.4;
+    color: var(--color-text-dark);
+    letter-spacing: 0.05em;
+    margin-bottom: var(--vspace-0_5);
+    position: relative;
+    padding-left: 1.8rem;
+    transform: translateY(0.3rem); /* Alinhamento vertical refinado */
+    transition: all 0.4s ease-out;
+}
+
+/* Marcador decorativo antes do título */
+.skill-bars li strong::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: var(--color-1);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+/* Efeito hover sutil */
+.skill-bars li:hover strong {
+    color: var(--color-1-dark);
+    padding-left: 2.2rem;
+}
+
+.skill-bars li:hover strong::before {
+    background: var(--color-2);
+    opacity: 1;
+    width: 14px;
+    height: 14px;
+}
+
+/* Ajuste para dispositivos móveis */
+@media screen and (max-width: 600px) {
+    .skill-bars li strong {
+        font-size: calc(var(--text-size) * 0.8);
+        padding-left: 1.5rem;
+    }
+    
+    .skill-bars li strong::before {
+        width: 10px;
+        height: 10px;
+    }
+}
 /* --------------------------------------------------------------------
  * ## stats tabs
  * -------------------------------------------------------------------- */
