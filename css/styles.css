@@ -4212,39 +4212,43 @@ img.u-pull-left {
     }
 }
 
-    /* ================================
- * Secção de Projetos - Project Cards
+   /* ================================
+ * # PROJETOS (Secção de Projetos)
  * ================================ */
+
+.s-works {
+    padding: var(--vspace-3) 0;
+    background-color: var(--color-white);
+}
+
 .s-works__projects {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--vspace-1_25);
-    margin-top: var(--vspace-1_5);
+    gap: var(--vspace-1_5);
+    margin-top: var(--vspace-2);
 }
 
 .project-card {
-    background-color: var(--color-white);
-    border-radius: var(--border-radius);
-    padding: var(--vspace-1);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    background-color: var(--color-gray-1);
+    padding: var(--vspace-1_5);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project-card h3 {
     font-size: var(--text-lg);
+    color: var(--color-2);
     margin-bottom: var(--vspace-0_5);
-    color: var(--color-text-dark);
 }
 
 .project-card p {
     font-size: var(--text-size);
-    color: var(--color-text);
+    color: var(--color-text-light);
     line-height: 1.6;
 }
-
