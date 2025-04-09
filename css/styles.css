@@ -4309,7 +4309,7 @@ img.u-pull-left {
 }
 
 .card img {
-    width: 100%; /* Isso faz a imagem ocupar toda a largura do card */
+    width: auto; /* Isso faz a imagem ocupar toda a largura do card */
     max-width: 300px; /* Limita a largura da imagem */
     height: auto; /* Mantém a proporção da imagem */
     border-radius: 8px; /* Deixa as bordas arredondadas, se desejar */
