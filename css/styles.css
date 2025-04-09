@@ -2442,7 +2442,7 @@ td:last-child {
  * ------------------------------------------------------------------- */
 .s-works {
     padding: var(--vspace-5) 0;
-    background-color: green;
+    background-color: Green;
 }
 
 .folio-list {
