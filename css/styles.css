@@ -3494,7 +3494,7 @@ img.u-pull-left {
  * ## about skills
  * -------------------------------------------------------------------- */
 .s-about__skills {
-    padding-top : var(--vspace-3);
+   margin-top = auto;
 }
 
 .s-about__skills .text-subtitle::after {
